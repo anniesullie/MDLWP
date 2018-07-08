@@ -38,9 +38,9 @@
 			</header><!-- .entry-header -->
 		</div>
 
-		<div class="entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+		<div class="entry-summary mdl-color-text--grey-600 mdl-card__supporting-text">
 			<?php
-				the_content( sprintf(
+				the_excerpt( sprintf(
 					/* translators: %s: Name of current post. */
 					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'mdlwp' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
@@ -64,6 +64,16 @@
 	        <?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php mdlwp_posted_on(); ?>
+				<?php
+					$categories = get_the_terms( $id, 'category' );
+					if ( ! $categories || is_wp_error( $categories ) )
+						$categories = array();
+					foreach ($categories as $category) {
+						echo '<span class="mdl-chip">';
+						echo '	<span class="mdl-chip__text"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+						echo '</span>';
+					}
+				?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 	              
