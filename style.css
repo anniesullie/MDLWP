@@ -1,24 +1,18 @@
 /*!
 Theme Name: MDLWP
-Theme URI: https://github.com/braginteractive/MDLWP
-Author: Brad Williams
-Author URI: http://braginteractive.com
+Theme URI: https://github.com/anniesullie/MDLWP
+Author: Annie Sullivan
+Author URI: https://anniesullie.com
 Description: Material Design Lite WordPress Theme
-Version: 1.2.3
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mdlwp
-GitHub Theme URI: https://github.com/braginteractive/MDLWP
+GitHub Theme URI: https://github.com/anniesullie/MDLWP
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-
-MDLWP is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -204,6 +198,8 @@ textarea {
       color: #757575;
       font-size: 12px;
       line-height: 16px; }
+    .site-main .meta .mdl-chip {
+      margin-right: 8px; }
 
 .single-post .entry-content p {
   font-size: 16px;
