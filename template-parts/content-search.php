@@ -45,14 +45,10 @@
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-footer meta mdl-card__actions mdl-card--border">
-
-			<div class="avatar-img">
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
-			</div>
-	        
 	        <?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php mdlwp_posted_on(); ?>
+			  <?php mdlwp_post_categories(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 	              

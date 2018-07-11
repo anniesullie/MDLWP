@@ -64,18 +64,7 @@
 	        <?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php mdlwp_posted_on(); ?>
-				<div class="category-chip-container">
-				<?php
-					$categories = get_the_terms( $id, 'category' );
-					if ( ! $categories || is_wp_error( $categories ) )
-						$categories = array();
-					foreach ($categories as $category) {
-						echo '<span class="mdl-chip">';
-						echo '	<span class="mdl-chip__text"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a></span>';
-						echo '</span>';
-					}
-				?>
-				</div>
+			  <?php mdlwp_post_categories(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 	              

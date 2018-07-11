@@ -87,7 +87,6 @@ function post_link_attributes($output) {
 add_filter('next_post_link', 'post_link_attributes');
 add_filter('previous_post_link', 'post_link_attributes');
 
-
 if ( ! function_exists( 'mdlwp_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -109,13 +108,28 @@ function mdlwp_posted_on() {
 		esc_html_x( '%s', 'post date', 'mdlwp' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
-
-	$byline = sprintf(
-		esc_html_x( '%s', 'post author', 'mdlwp' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
  
-	echo '<strong class="byline"> ' . $byline . '</strong> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+
+}
+endif;
+
+if ( ! function_exists( 'mdlwp_post_categories' ) ) :
+/**
+ * Prints HTML with categories of the current post.
+ */
+function mdlwp_post_categories() {
+
+	echo '<div class="category-chip-container">';
+		$categories = get_the_terms( $id, 'category' );
+		if ( ! $categories || is_wp_error( $categories ) )
+			$categories = array();
+		foreach ($categories as $category) {
+			echo '<span class="mdl-chip">';
+			echo '	<span class="mdl-chip__text"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a></span>';
+			echo '</span>';
+		}
+	echo '</div>';
 
 }
 endif;
