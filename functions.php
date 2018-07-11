@@ -14,14 +14,6 @@ if ( ! function_exists( 'mdlwp_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function mdlwp_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on MDLWP, use a find and replace
-	 * to change 'mdlwp' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'mdlwp', get_template_directory() . '/languages' );
-
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -58,18 +50,6 @@ function mdlwp_setup() {
 		'gallery',
 		'caption',
 	) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	// add_theme_support( 'post-formats', array(
-	// 	'aside',
-	// 	'image',
-	// 	'video',
-	// 	'quote',
-	// 	'link',
-	// ) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'mdlwp_custom_background_args', array(
