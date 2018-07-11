@@ -34,9 +34,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 ## Main Navigation
 --------------------------------------------------------------*/
 .mdlwp-search-box {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
   margin-left: 16px;
   margin-right: 16px; }
   .mdlwp-search-box .mdl-textfield__input {
