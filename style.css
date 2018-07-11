@@ -17,7 +17,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Typography
 # Navigation
 	## Menus
 # Alignments
@@ -28,19 +27,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
-  color: #404040;
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  font-size: 16px;
-  font-size: 1rem; }
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
