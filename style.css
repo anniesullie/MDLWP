@@ -19,7 +19,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 ----------------------------------------------------------------
 # Navigation
 	## Menus
-# Alignments
 # Content
     ## Posts and pages
 	## Comments
@@ -63,24 +62,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-right: 16px; }
   .mdlwp-nav > .mdlwp-nav__button:last-child .mdl-button {
     margin-left: 16px; }
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em; }
-
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em; }
-
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
 
 /*--------------------------------------------------------------
 # Widths
