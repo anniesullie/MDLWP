@@ -33,15 +33,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 ## Main Navigation
 --------------------------------------------------------------*/
-.mdlwp-navigation-container {
-  direction: rtl;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  width: 500px;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-
 .mdlwp-search-box {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
