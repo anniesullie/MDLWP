@@ -31,11 +31,14 @@
 
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp"> 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
-		<div class="mdl-card__media" style="<?php echo $color . $bg . $height; ?> ">
+
+	  <div class="mdl-card__title">
 			<header>
-				<?php the_title( sprintf( '<h3 style="%s"> ', $title_color, '</h3>' )); ?>
+				<?php the_title( sprintf( '<h3><a style="%s" href="%s" rel="bookmark">', $title_color, esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 			</header><!-- .entry-header -->
+		</div>
+
+		<div class="mdl-card__media" style="<?php echo $color . $bg . $height; ?> ">
 		</div>
 
 		<div class="entry-content mdl-color-text--grey-600 mdl-card__supporting-text">

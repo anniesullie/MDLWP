@@ -31,26 +31,18 @@
 
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp"> 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
 
-		
-		<div class="mdl-card__media" style="<?php echo $color . $bg . $height; ?> ">
+	  <div class="mdl-card__title">
 			<header>
-				<?php the_title( sprintf( '<h3 style="%s"> ', $title_color, '</h3>' )); ?>
+				<?php the_title( sprintf( '<h3><a style="%s" href="%s" rel="bookmark">', $title_color, esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 			</header><!-- .entry-header -->
 		</div>
 
-		<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-			<?php if ( 'post' == get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php mdlwp_posted_on(); ?>
-			  <?php mdlwp_post_categories(); ?>
-				</div><!-- .entry-meta -->
-			<?php endif; ?>
-	    </div>
+		<div class="mdl-card__media" style="<?php echo $color . $bg . $height; ?> ">
+		</div>
 
 		<div class="entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+			<?php mdlwp_posted_on(); ?>
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -59,6 +51,14 @@
 				) );
 			?>
 		</div><!-- .entry-content -->
+
+		<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+			<?php if ( 'post' == get_post_type() ) : ?>
+				<div class="entry-meta">
+			  <?php mdlwp_post_categories(); ?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</div>
 
 		<?php if ( has_tag() ) { ?>
 			<footer class="entry-footer meta mdl-card__actions mdl-card--border">

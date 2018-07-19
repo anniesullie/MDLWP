@@ -84,10 +84,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
   .site-main .mdl-card {
     margin-bottom: 35px; }
   .site-main header h3 {
+    font-size: 24px;
+    font-weight: 300;
     margin: 0;
-    color: #fff; }
+    color: #202124; }
     .site-main header h3 a {
-      color: #fff;
+      font-size: 24px;
+      font-weight: 300;
+      color: #202124;
       text-decoration: none; }
   .site-main .mdl-card__media {
     box-sizing: border-box;
@@ -100,6 +104,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
     align-items: flex-end;
     cursor: pointer;
     height: 280px; }
+  .site-main div.entry-summary, div.entry-content {
+    margin-bottom: -16px;}
   .site-main .meta {
     box-sizing: border-box;
     padding: 16px;
@@ -127,6 +133,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
       line-height: 16px; }
     .site-main .meta .mdl-chip {
       margin-right: 8px; }
+    .site-main .posted-on a {
+      text-decoration: none;
+      color: #757575;
+      font-size: 12px;
+      line-height: 16px; }
 
 .single-post .entry-content p {
   font-size: 16px;
